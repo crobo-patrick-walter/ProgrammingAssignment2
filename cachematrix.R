@@ -1,5 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+### rprog-010
+## Programming Assignment 2
+#################################
 
 ## makeCacheMatrix
 # Allows to get & set a matrix (A) and its inverse (∀)
@@ -26,13 +27,13 @@ makeCacheMatrix <- function(x = matrix()) {
 # 1. recieve the inverse matrix m of original matrix x
 # 2. if the inverse does already exist (is not NULL)
 # 2a  return already calculated inversed matrix m
-# 3. if m is NULL (no inverse existing), get the cachedMatrix (data)
+# 3. if m is NULL (no inverse existing), get the original matrix ( save to data)
 # 4. calculate the inverse and save it as m
 # 5. set the cached matrix in makeCacheMatrix to m with setinverse so it can be retrieved next time
 # 6. return m
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
   m <- x$getinverse()
   if(!is.null(m)) {
     message("getting cached inversed matrix")
